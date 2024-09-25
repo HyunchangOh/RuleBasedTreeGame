@@ -1,0 +1,326 @@
+/* styles.css */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: white;
+}
+
+#path {
+    position: relative;
+    width: 800px;
+    height: 600px;
+}
+
+.horizontal-line {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 15%;
+    height: 2px;
+    background-color: black;
+}
+
+.vertical-line-up {
+    position: absolute;
+    top: 25%;
+    left: 15%;
+    width: 2px;
+    height: 25%;
+    background-color: black;
+}
+
+.vertical-line-down {
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    width: 2px;
+    height: 25%;
+    background-color: black;
+}
+
+.vertical-line-up-up {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    width: 2px;
+    height: 15%;
+    background-color: black;
+}
+
+.vertical-line-up-down {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    width: 2px;
+    height: 15%;
+    background-color: black;
+}
+
+.horizontal-line-up-down {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    width: 30%;
+    height: 2px;
+    background-color: black;
+}
+
+
+.horizontal-line-up-up {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    width: 30%;
+    height: 2px;
+    background-color: black;
+}
+
+.horizontal-line-up-down {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    width: 30%;
+    height: 2px;
+    background-color: black;
+}
+
+.horizontal-line-down {
+    position: absolute;
+    top: 75%;
+    left: 15%;
+    width: 65%;
+    height: 2px;
+    background-color: black;
+}
+
+.horizontal-line-up {
+    position: absolute;
+    top: 25%;
+    left: 15%;
+    width: 35%;
+    height: 2px;
+    background-color: black;
+}
+
+#path img {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    opacity: 0; /* Initially hide the images */
+}
+
+
+#img1 {
+    animation: moveUpwardUp 10s linear infinite, fadeIn 0.5s ease forwards;
+    animation-delay: 0.5s, 0.5s;
+}
+
+#img2 {
+    animation: moveDownward 10s linear infinite, fadeIn 0.5s ease forwards;
+    animation-delay: 0.5s, 0.5s;
+}
+
+#img3 {
+    animation: moveUpwardDown 10s linear infinite, fadeIn 0.5s ease forwards;
+    animation-delay: 1s, 1s;
+}
+
+#img4 {
+    animation: moveDownward 10s linear infinite, fadeIn 0.5s ease forwards;
+    animation-delay: 1.5s, 1.5s;
+}
+
+#img5 {
+    animation: moveUpwardUp 10s linear infinite, fadeIn 0.5s ease forwards;
+    animation-delay: 2s, 2s;
+}
+
+/* @keyframes moveUpward {
+    0% { left: 0; top: 50%; }
+    25% { left: 15%; top: 50%; }
+    50% { left: 15%; top: 25%; }
+    100% { left: 80%; top: 25%; }
+} */
+
+@keyframes moveUpwardUp {
+    0% { left: 0; top: 50%; }
+    25% { left: 15%; top: 50%; }
+    50% { left: 15%; top: 25%; }
+    60% { left: 50%; top: 25%; }
+    70% { left: 50%; top: 10%; }
+    100% { left: 80%; top: 10%; }
+}
+
+@keyframes moveUpwardDown {
+    0% { left: 0; top: 50%; }
+    25% { left: 15%; top: 50%; }
+    50% { left: 15%; top: 25%; }
+    60% { left: 50%; top: 25%; }
+    70% { left: 50%; top: 40%; }
+    100% { left: 80%; top: 40%; }
+}
+
+@keyframes moveDownward {
+    0% { left: 0; top: 50%; }
+    25% { left: 15%; top: 50%; }
+    50% { left: 15%; top: 75%; }
+    100% { left: 80%; top: 75%; }
+}
+
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+#resumeButton {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.label {
+    position: absolute;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.label-yes {
+    top: 45%; /* Adjust top position as needed */
+    left: 29%; /* Adjust left position as needed */
+}
+
+.label-no {
+    top: 52%; /* Adjust top position as needed */
+    left: 29%; /* Adjust left position as needed */
+}
+
+.label-yes2 {
+    top: 25%; /* Adjust top position as needed */
+    left: 47%; /* Adjust left position as needed */
+}
+
+.label-no2 {
+    top: 30%; /* Adjust top position as needed */
+    left: 47%; /* Adjust left position as needed */
+}
+
+.label-cat {
+    top: 16%; /* Adjust top position as needed */
+    right: 30%; /* Adjust right position as needed */
+}
+
+.label-dog {
+    top: 40%; /* Adjust top position as needed */
+    right: 30%; /* Adjust right position as needed */
+}
+
+.label-dog2 {
+    top: 70%; /* Adjust top position as needed */
+    right: 30%; /* Adjust right position as needed */
+}
+
+
+
+/* Additional styles for draggable and dropzone elements */
+.draggable {
+    width: 250px;
+    height: 50px;
+    background-color: #f0f0f0;
+    border: 1px dotted #aaa;
+    cursor: grab;
+    user-select: none;
+    text-align: center;
+    line-height: 50px;
+    position: absolute;
+    color:grey;
+    top: 45%;
+    right:5%;
+    z-index: 10;
+}
+
+.dropzone {
+    width: 250px;
+    height: 50px;
+    border: 2px dashed #aaa;
+    margin-top: 20px;
+    padding: 10px;
+    text-align: center;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 310px; /* Adjusted top position */
+    left: 500px; /* Adjusted left position */
+    z-index: 1;
+}
+
+/* Additional styles for draggable and dropzone elements */
+.draggable2 {
+    width: 250px;
+    height: 50px;
+    background-color: #f0f0f0;
+    border: 1px dotted #aaa;
+    cursor: grab;
+    user-select: none;
+    text-align: center;
+    line-height: 50px;
+    position: absolute;
+    color:grey;
+    top: 55%;
+    right:5%;
+    z-index: 10;
+}
+
+.dropzone2 {
+    width: 250px;
+    height: 50px;
+    border: 2px dashed #aaa;
+    margin-top: 20px;
+    padding: 10px;
+    text-align: center;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 22%; /* Adjusted top position */
+    left: 51%; /* Adjusted left position */
+    z-index: 1;
+}
+
+/* .dropzone-content {
+    display: inline-block;
+    vertical-align: middle;
+} */
+
+.title {
+    position: absolute;
+    top: 20px; /* Adjust top position as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+}
+
+.next-button {
+    position: absolute;
+    bottom: 20px; /* Adjust bottom position as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+#nextButton {
+    display:none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}

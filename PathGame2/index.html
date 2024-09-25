@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Path Animation</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: white;
+            position: relative;
+        }
+
+        #path {
+            position: relative;
+            width: 800px;
+            height: 600px;
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="title">
+        Drag and Drop the Condition to Classify Photos
+    </div>
+    <div id="path">
+        <!-- Path lines -->
+        <div class="horizontal-line"></div>
+        <div class="vertical-line-up"></div>
+        <div class="vertical-line-down"></div>
+        <div class="horizontal-line-up"></div>
+        <div class="horizontal-line-down"></div>
+
+        <div class="vertical-line-up-up"></div>
+        <div class="vertical-line-up-down"></div>
+        <div class="horizontal-line-up-up"></div>
+        <div class="horizontal-line-up-down"></div>
+
+        <!-- Images -->
+        <img id="img1" src="img1.jpeg" class="upward" alt="Image 1">
+        <img id="img2" src="img2.jpg" class="downward" alt="Image 2">
+        <img id="img3" src="img3.jpg" class="upward" alt="Image 3">
+        <img id="img4" src="img4.jpg" class="downward" alt="Image 4">
+        <img id="img5" src="img5.jpg" class="upward" alt="Image 5">
+    </div>
+
+    <!-- Labels -->
+    <div class="label label-yes">yes</div>
+    <div class="label label-no">no</div>
+    <div class="label label-cat">Cat</div>
+    <div class="label label-dog">Dog</div>
+
+    <div class="label label-yes2">yes</div>
+    <div class="label label-no2">no</div>
+    <div class="label label-dog2">Dog</div>
+
+    <!-- Draggable Element -->
+    <div id="dragElement" class="draggable" draggable="false">If animal has whiskers,</div>
+    <div id="dragElement2" class="draggable2" draggable="false">If animal's tongue is hidden,</div>
+
+    <!-- Drop Zone -->
+    <div id="dropZone" class="dropzone">
+        <span class="dropzone-content">Drag and Drop the Condition here!</span>
+    </div>
+
+        <!-- Drop Zone -->
+    <div id="dropZone2" class="dropzone2">
+        <span class="dropzone-content2">Drag and Drop the Condition here!</span>
+    </div>
+    <div class="next-button">
+        <button id="nextButton">Next</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
